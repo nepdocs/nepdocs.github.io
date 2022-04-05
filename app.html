@@ -29,54 +29,25 @@
   <div id="app">
     <v-app id="inspire" style="
         background: rgb(305, 305, 305);">
+      <!-- #121212 -->
 
-
-      <v-app-bar color="white" app dark dense flat clipped-right>
+  
+      <v-app-bar app dense flat clipped-right>
 
         <v-avatar size="35">
           <img src="images/nep.png" alt="avatar">
         </v-avatar> &nbsp; &nbsp;
         <v-toolbar-title>
-          NEP +
+          {{tool_title}}
         </v-toolbar-title>
 
-
-    
-
         <v-spacer></v-spacer>
-
-
 
         <v-toolbar-items>
 
 
-          <v-btn text color="grey darken-2" color="blue darken-1" href="https://enriquecoronadozu.github.io/NEP/start"
-            target="_blank" text>NEP App
-          </v-btn>
-
-          <v-btn href="https://github.com/enriquecoronadozu/NEP_samples" target="_blank" dark text
-            color="grey darken-2" text>NEP Libraries
-          </v-btn>
-
-          <v-btn text color="grey darken-2" href="https://www.mdpi.com/1424-8220/20/5/1500" dark target="_blank" text>
-            NEP CLI
-          </v-btn>
-
-          <v-btn text color="grey darken-2" href="https://www.mdpi.com/1424-8220/20/5/1500" target="_blank" text>
-            NEP Bridge
-          </v-btn>
-
-          <v-btn text color="grey darken-2" href="https://www.mdpi.com/1424-8220/20/5/1500" target="_blank" text>
-            NEP Components
-          </v-btn>
-
-
-          <v-btn text color="grey darken-2" href="https://www.mdpi.com/1424-8220/20/5/1500" target="_blank" text>
-            Other tools
-          </v-btn>
-
-          <v-btn text color="grey darken-2" href="https://www.mdpi.com/1424-8220/20/5/1500" target="_blank" text>
-            Publications
+          <v-btn icon color="grey darken-2" href="https://nep.plus" target="_blank">
+            <v-icon>mdi-arrow-left</v-icon>
           </v-btn>
 
 
@@ -90,30 +61,29 @@
 
       </v-app-bar>
 
-
       <v-main>
 
 
         <v-container grid-list-md text-center>
           <v-layout wrap align-center justify-center>
-       
+
             <v-flex xs10 md10>
               <v-card color="white" flat>
 
-
-                <v-layout wrap align-center justify-center>
-
-
-
-                </v-layout>
+                <v-card-title>
+                  <p style=" color:#424242; font-size: 25px"> What is nep? </p>
+                </v-card-title>
 
 
-              </v-card>
+          </v-layout>
+
+
+          </v-card>
 
 
 
 
-            </v-flex>
+          </v-flex>
 
           </v-layout>
 
@@ -127,8 +97,9 @@
       </v-main>
 
 
-
     </v-app>
+
+    
   </div>
 
   <style>
@@ -176,17 +147,24 @@
       el: '#app',
       vuetify: new Vuetify(),
       data: () => ({
-
+        tool_title: "Nep App",
         color_nav: "grey darken-2",
+        mobile: "false",
       }),
 
 
       created() {
+
         this.initialize()
       },
 
       methods: {
         initialize() {
+
+          this.mobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+          if (isMobile) {
+            /* your code here */
+          }
 
         },
 
