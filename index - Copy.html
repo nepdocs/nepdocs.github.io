@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="author" content="Enrique Coronado" />
+  <title>NEP+ Docs</title>
+  <link rel="shortcut icon" type="image/png" href="images/nep.png" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@3.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+
+
+  <link rel="stylesheet" href="web/prism.css" data-noprefix />
+
+
+  <!--   #################### Material Icons  ################### -->
+  <link rel="stylesheet" href="web/material-icons/material-design-icons.css">
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+</head>
+
+
+<body>
+
+  <div id="app">
+    <v-app id="inspire" style="
+        background: rgb(305, 305, 305);">
+
+      <div v-if="mobile === false">
+        <v-app-bar color="indigo" app dark dense flat clipped-right>
+
+          <v-avatar size="35">
+            <img src="images/nep.png" alt="avatar">
+          </v-avatar> &nbsp; &nbsp;
+          <v-toolbar-title>
+            NEP +
+          </v-toolbar-title>
+
+          <v-spacer></v-spacer>
+
+
+
+          <v-toolbar-items>
+
+
+
+            <v-btn text color="color_nav" href="https://nepplus.gitbook.io/nep-docs/" target="_blank" text>
+              Documentation
+            </v-btn>
+
+
+            <v-menu offset-y>
+              <template v-slot:activator="{ on, attrs }">
+                <v-btn text color="color_nav" v-bind="attrs" v-on="on" text>Tools
+                </v-btn>
+              </template>
+              <v-list>
+                <v-list-item v-for="(items, index) in items_tools" :key="index" href="items.link" target="_blank">
+                  <v-list-item-title>{{ items.title }}</v-list-item-title>
+                </v-list-item>
+              </v-list>
+            </v-menu>
+
+            <v-menu offset-y>
+              <template v-slot:activator="{ on, attrs }">
+                <v-btn text color="color_nav" v-bind="attrs" v-on="on" text>Components
+                </v-btn>
+              </template>
+              <v-list>
+                <v-list-item v-for="(items, index) in items_components" :key="index" href="items.link" target="_blank">
+                  <v-list-item-title>{{ items.title }}</v-list-item-title>
+                </v-list-item>
+              </v-list>
+            </v-menu>
+
+            <v-btn text color="color_nav" href="https://www.mdpi.com/1424-8220/20/5/1500" target="_blank" text>
+              Publications
+            </v-btn>
+
+
+
+          </v-toolbar-items>
+
+
+          <div>&nbsp;</div>
+
+
+
+        </v-app-bar>
+
+
+        <v-main>
+
+
+          <v-container grid-list-md text-center>
+            <v-layout wrap align-center justify-center>
+
+
+
+              <v-flex xs10 md10>
+                <v-card color="white" flat>
+
+
+                  <v-layout wrap align-center justify-center>
+
+                    <v-flex xs12 md12>
+                      <v-card color="white" flat>
+
+                        <div>&nbsp;</div>
+                        <div>&nbsp;</div>
+                        <div>&nbsp;</div>
+                        <div>&nbsp;</div>
+
+
+                        <v-row dense>
+
+                          <v-col cols="5">
+
+                            <div>&nbsp;</div>
+                            <div>&nbsp;</div>
+                            <div>&nbsp;</div>
+
+
+
+
+                            <div>
+                              <p style="text-align: center; font-size: 40px; color:#616161;"><b>Robotics </b> for
+                                everyone
+                              </p>
+                            </div>
+                            <div>&nbsp;</div>
+                            <p style="text-align: center;"> <b>NEP +</b> is a open-source, <b>user-friendly</b> and
+                              <b>cross-platform </b> toolkit for building interactive
+                              experiences with robots
+                            </p>
+
+
+                            <v-container>
+                              <v-avatar size="70">
+                                <img src="images/nep.png" alt="avatar">
+                              </v-avatar>
+                            </v-container>
+                          </v-col>
+
+                          <v-col cols="2">
+
+                          </v-col>
+
+                          <v-col cols="5">
+                            <v-img class="mx-auto" max-width="400" src="images/cute.png"></v-img>
+                          </v-col>
+
+                        </v-row>
+
+
+                        <div>&nbsp;</div>
+                        <div>&nbsp;</div>
+                        <div>&nbsp;</div>
+                        <div>&nbsp;</div>
+
+                        <v-row dense>
+
+                          <v-col cols="6">
+
+                            <div>
+
+                              <v-img class="mx-auto" src="images/links.png"></v-img>
+                              &nbsp;&nbsp;
+
+                            </div>
+
+
+
+
+                          </v-col>
+
+                          <v-col cols="1">
+
+                          </v-col>
+
+                          <v-col cols="5">
+
+
+
+                            <div>&nbsp;</div>
+                            <div>&nbsp;</div>
+
+
+                            <div>
+                              <p style="text-align: center; font-size: 40px; color:#616161;"><b>Connecting </b> code and
+                                things together
+                              </p>
+                            </div>
+                            <div>&nbsp;</div>
+                            <p style="text-align: center;">
+                              With
+                              <b>NEP +</b> developers can <b style="color: #00695C;">send messages between robotics
+                                building
+                                blocks</b>.
+
+                            </p>
+
+                          </v-col>
+
+                        </v-row>
+
+                        <div>&nbsp;</div>
+                        <div>&nbsp;</div>
+                        <div>&nbsp;</div>
+                        <div>&nbsp;</div>
+
+
+                        <v-row dense>
+
+                          <v-col cols="5">
+
+                            <div>&nbsp;</div>
+
+
+
+
+
+
+
+
+
+                            <div>
+                              <p style="text-align: center; font-size: 40px; color:#616161;"><b>Write once, </b> run on
+                                almost anywhere
+                              </p>
+                            </div>
+                            <div>&nbsp;</div>
+                            <p style="text-align: center;"> Most tools of
+                              <b>NEP +</b> are compatible with Windows, OSX and Linux
+                            </p>
+
+
+
+                          </v-col>
+
+                          <v-col cols="2">
+
+                          </v-col>
+
+                          <v-col cols="5">
+                            <v-img class="mx-auto" src="images/os.png"></v-img>
+                          </v-col>
+
+                        </v-row>
+
+
+
+
+                      </v-card>
+
+                    </v-flex>
+
+                  </v-layout>
+
+
+
+
+
+
+
+                  &nbsp;&nbsp;
+                  &nbsp;&nbsp;
+                  &nbsp;&nbsp;
+                  &nbsp;&nbsp;
+
+
+
+                  <div>
+
+                    <p style="text-align: justify">
+                      <b>NEP +</b> was designed to be simple, easy-to-install and easy-to-use. <b>NEP +</b> is mainly
+                      build on top of high-performance and usable sockets
+                      libraries, popular development frameworks and modern programming languagues including:
+                    </p>
+
+                    <div>
+
+                      <v-img class="mx-auto" max-width="800" src="images/tech.png"></v-img>
+                      &nbsp;&nbsp;
+
+                    </div>
+
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+
+                    <p>
+                      The core of <b>NEP +</b> is composed of the following cross-platform tools:
+
+                      &nbsp;&nbsp;
+                      &nbsp;&nbsp;
+
+
+                      <v-row dense>
+
+                        <v-col cols="12">
+
+                          &nbsp;&nbsp;
+                          &nbsp;&nbsp;
+                        </v-col>
+
+
+                        <v-col cols="5">
+                          <v-card color="#385F73" dark>
+                            <v-card-title class="text-h5">
+                              NEP APP
+                            </v-card-title>
+
+                            <v-card-subtitle>is a user interface data visualization management of software architectures
+                              and edition of projects </v-card-subtitle>
+
+                            <v-card-actions>
+                              <v-btn text>
+                                Documentation <v-icon right dark>
+                                  mdi-arrow-right-bold
+                                </v-icon>
+                              </v-btn>
+                            </v-card-actions>
+                          </v-card>
+
+                          &nbsp;&nbsp;
+                          &nbsp;&nbsp;
+                        </v-col>
+
+                        <v-col cols="1">
+                        </v-col>
+
+
+                        <v-col cols="5">
+                          <v-card color="#385F73" dark>
+                            <v-card-title class="text-h5">
+                              NEP Libraries
+                            </v-card-title>
+
+                            <v-card-subtitle> provides inter-process communication features using sockets for modern
+                              programming languages </v-card-subtitle>
+
+                            <v-card-actions>
+                              <v-btn text>
+                                Documentation <v-icon right dark>
+                                  mdi-arrow-right-bold
+                                </v-icon>
+                              </v-btn>
+                            </v-card-actions>
+                          </v-card>
+
+                          &nbsp;&nbsp;
+                          &nbsp;&nbsp;
+                        </v-col>
+
+
+                      </v-row>
+
+                      <v-row dense>
+
+                        <v-col cols="12">
+
+                          &nbsp;&nbsp;
+                          &nbsp;&nbsp;
+                        </v-col>
+
+                        <v-col cols="5">
+                          <v-card color="#385F73" dark>
+                            <v-card-title class="text-h5">
+                              NEP CLI
+                            </v-card-title>
+
+                            <v-card-subtitle> is a command-line tool for more traditional and advanced developers.
+                            </v-card-subtitle>
+
+                            <v-card-actions>
+                              <v-btn text>
+                                Documentation <v-icon right dark>
+                                  mdi-arrow-right-bold
+                                </v-icon>
+                              </v-btn>
+                            </v-card-actions>
+                          </v-card>
+
+                          &nbsp;&nbsp;
+                          &nbsp;&nbsp;
+                        </v-col>
+
+                        <v-col cols="1">
+                        </v-col>
+                        <v-col cols="5">
+                          <v-card color="#385F73" dark>
+                            <v-card-title class="text-h5">
+                              NEP Bridge
+                            </v-card-title>
+
+                            <v-card-subtitle> enable to communicate NEP messages with other robotics and IoT middlewares
+                            </v-card-subtitle>
+
+                            <v-card-actions>
+                              <v-btn text>
+                                Documentation <v-icon right dark>
+                                  mdi-arrow-right-bold
+                                </v-icon>
+                              </v-btn>
+                            </v-card-actions>
+                          </v-card>
+
+                          &nbsp;&nbsp;
+                          &nbsp;&nbsp;
+                        </v-col>
+
+                      </v-row>
+
+
+                    </p>
+
+                    &nbsp;&nbsp;
+
+                    <p>
+                      <b>NEP +</b> also provides a set of basic interfaces for:
+                    </p>
+
+                    <v-row dense>
+
+
+
+                      <v-col cols="5">
+
+                        <div>&nbsp;</div>
+                        <div>&nbsp;</div>
+                        <div>&nbsp;</div>
+
+
+                        <div>
+                          <p style="text-align: center; font-size: 35px; color:#616161;"><b>Object </b> recognition
+                          </p>
+                        </div>
+                        <div>&nbsp;</div>
+                        <p style="text-align: center;"> <b>NEP + Object </b> enable to run pre-trainned YOLO and
+                          mobilenet-ssd
+                          models using the <b>OpenCV</b> library
+                        </p>
+
+
+                        <v-container>
+                          <v-btn class="ma-2" color="primary" dark>
+                            More details
+                            <v-icon dark right>
+                              mdi-arrow-right-bold
+                            </v-icon>
+                          </v-btn>
+                        </v-container>
+                      </v-col>
+
+                      <v-col cols="2">
+
+                      </v-col>
+
+                      <v-col cols="5">
+
+                        <div>&nbsp;</div>
+                        <div>&nbsp;</div>
+                        <div>&nbsp;</div>
+
+
+                        <div>
+                          <p style="text-align: center; font-size: 35px; color:#616161;"><b>Human </b>
+                            recognition
+                          </p>
+                        </div>
+                        <div>&nbsp;</div>
+                        <p style="text-align: center;"> <b>NEP + Human</b> provides an interface enabling hand,
+                          skeleton,
+                          and face
+                          recognition over <b>mediapipe</b>
+                        </p>
+
+
+                        <v-container>
+                          <v-btn class="ma-2" color="primary" dark>
+                            More details
+                            <v-icon dark right>
+                              mdi-arrow-right-bold
+                            </v-icon>
+                          </v-btn>
+                        </v-container>
+                      </v-col>
+
+
+                    </v-row>
+
+
+                    <div>&nbsp;</div>
+                    <div>&nbsp;</div>
+                    &nbsp;&nbsp;
+
+                    <p>
+                      Application areas of <b>NEP +</b> includes, but are not limited to:
+                    </p>
+
+
+
+
+                    <div class="text-center">
+                      <v-chip class="ma-2">
+
+                        Social Robotics
+                      </v-chip>
+
+                      <v-chip class="ma-2">
+
+                        Human-Robot Interaction
+                      </v-chip>
+
+                      <v-chip class="ma-2">
+
+                        Internet of Robotic Things (IoRT)
+                      </v-chip>
+
+                      <v-chip class="ma-2">
+
+                        End-User Development for Robotics
+                      </v-chip>
+
+                    </div>
+
+
+
+                  </div>
+
+
+                  <div>&nbsp;</div>
+
+
+                  <div>
+                    <p style="text-align: justify">
+
+                      <b>Reference NEP libraries:</b>
+
+                    </p>
+
+                    </p>
+                    <pre
+                      class="keep-initial-line-feed"><code data-prismjs-copy="copy"  class="language-python"> {{ref1}}</code></pre>
+                  </div>
+
+                  &nbsp;&nbsp;
+                  &nbsp;&nbsp;
+
+                  <v-divider></v-divider>
+
+
+
+
+
+
+                </v-card>
+
+
+
+
+              </v-flex>
+
+            </v-layout>
+
+          </v-container>
+
+
+        </v-main>
+
+      </div>
+
+
+      <div v-if="mobule === true">
+
+        
+      </div>
+
+    </v-app>
+  </div>
+
+  <style>
+    #listDiv.ul {
+      text-align: left;
+    }
+
+    div.center {
+      margin-left: auto;
+      margin-right: auto;
+      display: table;
+    }
+
+    ul {
+      text-align: left;
+    }
+
+    li {
+      font-size: 22px;
+      color: #0277BD;
+      text-align: left
+    }
+
+
+    p {
+      font-size: 22px;
+      color: #616161;
+      text-align: left
+    }
+  </style>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script src="web/prism.js"></script>
+
+  <script>
+
+    Prism.plugins.NormalizeWhitespace.setDefaults({
+      'remove-trailing': true,
+      'remove-indent': true,
+      'left-trim': true,
+    });
+
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+      data: () => ({
+        mobile: "false",
+
+        items_tools: [
+          { title: 'Nep App', link: '' },
+          { title: 'Nep CLI', link: '' },
+          { title: 'Nep Bridge', link: '' },
+        ],
+
+        items_components: [
+          { title: 'NEP + Object', link: '' },
+          { title: 'NEP + Human', link: '' },
+        ],
+
+        ref1:
+          `
+        @article{coronado2020towards,
+              title={Towards IoT-aided human--robot interaction using NEP and ROS: A platform-independent, accessible and distributed approach},
+              author={Coronado, Enrique and Venture, Gentiane},
+              journal={Sensors},
+              volume={20},
+              number={5},
+              pages={1500},
+              year={2020},
+              publisher={Multidisciplinary Digital Publishing Institute}
+            }`,
+
+
+
+
+
+        color_nav: "grey lighten-2",
+
+
+
+      }),
+
+      created() {
+        this.initialize()
+
+
+
+      },
+
+      methods: {
+        initialize() {
+
+
+          this.mobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+          if (isMobile) {
+            /* your code here */
+          }
+
+        },
+
+        onUpdate() {
+
+        },
+      }
+
+    })
+  </script>
+</body>
+
+</html>
