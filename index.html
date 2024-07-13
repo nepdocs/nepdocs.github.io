@@ -77,9 +77,7 @@
               </v-list>
             </v-menu>
 
-            <v-btn text color="color_nav" href="https://www.mdpi.com/1424-8220/20/5/1500" target="_blank" text>
-              Publications
-            </v-btn>
+     
 
 
 
@@ -134,8 +132,8 @@
                             </div>
                             <div>&nbsp;</div>
                             <p style="text-align: center;"> <b>NEP +</b> is a open-source, <b>user-friendly</b> and
-                              <b>cross-platform </b> toolkit for building interactive
-                              experiences with robots
+                              <b>cross-platform </b> robotics framework for facilitating the creation of interactive
+                              experiences 
                             </p>
 
 
@@ -197,10 +195,8 @@
                             </div>
                             <div>&nbsp;</div>
                             <p style="text-align: center;">
-                              With
-                              <b>NEP +</b> developers can <b style="color: #00695C;">send messages between robotics
-                                building
-                                blocks</b>.
+                               <b>NEP +</b> tools enable communication between robotics components using <b style="color: #00695C;"> ZeroMQ </b> and <b style="color: #00695C;"> ROS </b> 
+                              </b>
 
                             </p>
 
@@ -235,7 +231,7 @@
                             </div>
                             <div>&nbsp;</div>
                             <p style="text-align: center;"> Most tools of
-                              <b>NEP +</b> are compatible with Windows, OSX and Linux
+                              <b>NEP +</b> are designed to be compatible with Windows, OSX and Linux
                             </p>
 
 
@@ -277,9 +273,7 @@
                   <div>
 
                     <p style="text-align: justify">
-                      <b>NEP +</b> was designed to be simple, easy-to-install and easy-to-use. <b>NEP +</b> is mainly
-                      build on top of high-performance and usable sockets
-                      libraries, popular development frameworks and modern programming languagues including:
+                      <b>NEP +</b> is built on top of high-performance and usable sockets  libraries, popular development frameworks, and modern programming languages, including:
                     </p>
 
                     <div>
@@ -311,14 +305,13 @@
                         <v-col cols="5">
                           <v-card color="#385F73" dark>
                             <v-card-title class="text-h5">
-                              NEP APP
+                              NEP+ APP
                             </v-card-title>
 
-                            <v-card-subtitle>is a user interface data visualization management of software architectures
-                              and edition of projects </v-card-subtitle>
+                            <v-card-subtitle> A cross-platform user interface enabling data visualization, management of software architectures, and configuration of projects. </v-card-subtitle>
 
                             <v-card-actions>
-                              <v-btn text>
+                              <v-btn href="https://enrique-coronado.gitbook.io/nep-docs/reference/nep+-app" target="_blank" text>
                                 Documentation <v-icon right dark>
                                   mdi-arrow-right-bold
                                 </v-icon>
@@ -340,12 +333,11 @@
                               NEP Libraries
                             </v-card-title>
 
-                            <v-card-subtitle> provides inter-process communication features using sockets for modern
-                              programming languages </v-card-subtitle>
+                            <v-card-subtitle> A set of communication libraries using ZeroMQ sockets for C#, Java, Python, and Javascript </v-card-subtitle>
 
                             <v-card-actions>
-                              <v-btn text>
-                                Documentation <v-icon right dark>
+                              <v-btn text href="https://enrique-coronado.gitbook.io/nep-docs/reference/nep+-app" target="_blank">
+                                Reference <v-icon right dark>
                                   mdi-arrow-right-bold
                                 </v-icon>
                               </v-btn>
@@ -373,11 +365,11 @@
                               NEP CLI
                             </v-card-title>
 
-                            <v-card-subtitle> is a command-line tool for more traditional and advanced developers.
+                            <v-card-subtitle> A command-line tool for more traditional or advanced developers
                             </v-card-subtitle>
 
                             <v-card-actions>
-                              <v-btn text>
+                              <v-btn text href="https://enrique-coronado.gitbook.io/nep-docs/reference/nep-cli" target="_blank">
                                 Documentation <v-icon right dark>
                                   mdi-arrow-right-bold
                                 </v-icon>
@@ -397,11 +389,11 @@
                               NEP Bridge
                             </v-card-title>
 
-                            <v-card-subtitle> enable to communicate NEP messages with other robotics and IoT middlewares
+                            <v-card-subtitle> Enable to communicate ZeroMQ messages with other robotics and IoT middlewares.  
                             </v-card-subtitle>
 
                             <v-card-actions>
-                              <v-btn text>
+                              <v-btn text href="https://enrique-coronado.gitbook.io/nep-docs/reference/nep-bridge" target="_blank">
                                 Documentation <v-icon right dark>
                                   mdi-arrow-right-bold
                                 </v-icon>
@@ -473,7 +465,7 @@
                           </p>
                         </div>
                         <div>&nbsp;</div>
-                        <p style="text-align: center;"> <b>NEP + Human</b> provides an interface enabling hand,
+                        <p style="text-align: center;"> <b>NEP + Mediapipe</b> provides an interface enabling hand,
                           skeleton,
                           and face
                           recognition over <b>mediapipe</b>
@@ -536,18 +528,7 @@
                   <div>&nbsp;</div>
 
 
-                  <div>
-                    <p style="text-align: justify">
-
-                      <b>Reference NEP libraries:</b>
-
-                    </p>
-
-                    </p>
-                    <pre
-                      class="keep-initial-line-feed"><code data-prismjs-copy="copy"  class="language-python"> {{ref1}}</code></pre>
-                  </div>
-
+   
                   &nbsp;&nbsp;
                   &nbsp;&nbsp;
 
@@ -575,7 +556,7 @@
       </div>
 
 
-      <div v-if="mobule === true">
+      <div v-if="mobile === true">
 
         
       </div>
@@ -630,15 +611,31 @@
       data: () => ({
         mobile: "false",
 
+        journals: [
+
+         
+          {
+            title: ' Towards iot-aided human–robot interaction using nep and ros: A platform-independent, accessible and distributed approach',
+            authors: "Coronado, E., & Venture, G.",
+            src: "Sensors, 20(5), 1500.",
+            year: 2020,
+            url: "https://www.mdpi.com/1424-8220/20/5/1500",
+          },
+
+
+        
+
+        ],
+
         items_tools: [
-          { title: 'Nep App', link: '' },
-          { title: 'Nep CLI', link: '' },
-          { title: 'Nep Bridge', link: '' },
+          { title: 'NEP+ APP', link: '' },
+          { title: 'NEP CLI', link: '' },
         ],
 
         items_components: [
-          { title: 'NEP + Object', link: '' },
-          { title: 'NEP + Human', link: '' },
+          { title: 'NEP + Camera', link: '' },
+          { title: 'NEP + Object Recognition', link: '' },
+          { title: 'NEP + Mediapipe', link: '' },
         ],
 
         ref1:
@@ -676,13 +673,18 @@
 
 
           this.mobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-          if (isMobile) {
-            /* your code here */
-          }
+
 
         },
 
         onUpdate() {
+
+        },
+
+
+        onPublications() {
+
+        document.getElementById("publications").scrollIntoView({ behavior: 'smooth', block: 'center' });
 
         },
       }
